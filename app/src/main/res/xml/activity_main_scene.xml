@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragLeft" />
+        <OnClick
+            motion:targetId="@+id/s_regis"
+            motion:clickAction="transitionToEnd"/>
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragRight" />
+        <OnClick
+            motion:targetId="@+id/s_login"
+            motion:clickAction="transitionToStart"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/s_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/banner"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="200dp">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/softBlue" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/s_regis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/banner"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="200dp" >
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/edtemail"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toTopOf="@id/banner"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintRight_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/edtpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@+id/edtemail"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintRight_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/edtpassword"
+            motion:layout_constraintLeft_toLeftOf="@id/edtpassword"
+            motion:layout_constraintRight_toRightOf="@id/edtpassword"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/edtemailreg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toTopOf="@id/banner"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintLeft_toLeftOf="parent" />
+        <Constraint
+            android:id="@+id/edtpasswordreg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@+id/edtuserreg"
+            motion:layout_constraintLeft_toLeftOf="@id/edtemailreg"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/edtconpasswordreg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/edtpasswordreg"
+            motion:layout_constraintLeft_toLeftOf="@id/edtpasswordreg"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/btnsubmitreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/edtconpasswordreg"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toTopOf="@id/banner"
+            motion:layout_constraintLeft_toLeftOf="@id/s_regis"
+            motion:layout_constraintRight_toRightOf="@id/s_regis" />
+        <Constraint
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+        <Constraint
+            android:id="@+id/s_regis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/banner"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="200dp" >
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/softBlue" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/s_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/banner"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="200dp" >
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/edtuserreg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@+id/edtemailreg"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintLeft_toLeftOf="@id/edtemailreg" />
+        <Constraint
+            android:id="@+id/txterrereg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/edtemailreg"
+            motion:layout_constraintRight_toRightOf="@id/edtemailreg" />
+        <Constraint
+            android:id="@+id/txterreregcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/edtconpasswordreg"
+            motion:layout_constraintRight_toRightOf="@id/edtemailreg" />
+        <Constraint
+            android:id="@+id/txterrereguser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/edtuserreg"
+            motion:layout_constraintRight_toRightOf="@id/edtemailreg" />
+    </ConstraintSet>
+</MotionScene>

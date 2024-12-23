@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/navigation_forum_user">
+
+    <fragment
+        android:id="@+id/navigation_forum_user"
+        android:name="com.example.researcherpool.ui.FormUser.FormUserFragment"
+        android:label="ForumUser"
+        tools:layout="@layout/fragment_forum_user" />
+
+    <fragment
+        android:id="@+id/navigation_participant"
+        android:name="com.example.researcherpool.ui.Participation.ParticipationFragment"
+        android:label="Participation User"
+        tools:layout="@layout/fragment_participation" />
+
+
+
+</navigation>

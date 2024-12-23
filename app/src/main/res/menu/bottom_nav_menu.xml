@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_MyForm"
+        android:icon="@drawable/ic_form"
+        android:title="@string/title_myForm" />
+
+    <item
+        android:id="@+id/navigation_participantr"
+        android:icon="@drawable/ic_participant"
+        android:title="@string/title_participant" />
+
+
+</menu>

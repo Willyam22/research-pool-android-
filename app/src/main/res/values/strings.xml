@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ResearcherPool</string>
+    <string name="title_activity_index">IndexActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_entry">EntryActivity</string>
+    <string name="title_myForm">My Form</string>
+    <string name="title_participant">Participant</string>
+    <string name="title_activity_user_entry">UserEntryActivity</string>
+</resources>
